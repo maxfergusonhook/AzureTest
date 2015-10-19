@@ -5,9 +5,9 @@
 <body>
 <p>
     <?php
-    $name = "Edgar";
+   /* $name = "Edgar";
 
-    if ($name == "Simon") {
+   // if ($name == "Simon") {
         print "I know you!";
     }
     else {
@@ -20,8 +20,24 @@
     $myname = "Frodo Baggins";
     $myage = 111;
     echo "My name is" . $myname . "and i am" . $myage
+    */
+    $myage = 20;
+    if($myage >= 21)
+    {
+        echo "you can buy sausage rolls";
+    }
+    else if($myage >= 18)
+    {
+        echo "you can buy mugs and sausage rolls";
+    }
+    else ($myage >= 16)
+    {
+        echo "you can buy specs mugs and sausage rolls";
+    }
 
     ?>
+
+
 </p>
 </body>
 
