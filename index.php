@@ -22,6 +22,7 @@
     echo "My name is" . $myname . "and i am" . $myage
     */
     $myage = 20;
+    echo "i am " . $myage . " years old";
     if($myage >= 21)
     {
         echo "you can buy sausage rolls";
