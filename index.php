@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+</head>
 <body>
 <p>
     <?php
@@ -11,8 +11,8 @@
         print "I know you!";
     }
     else {
-    print "Who are you?";
-
+        print "Who are you?";
+    }
     echo "hello world";
     echo "Hello, world!";
     echo "Hello," . "" . "world" . "!";
@@ -24,5 +24,5 @@
     ?>
 </p>
 </body>
-</head>
+
 </html>
