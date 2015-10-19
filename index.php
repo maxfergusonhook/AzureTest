@@ -4,7 +4,6 @@
 </head>
 <body>
 <p>
-    Test
     <?php
    /* $name = "Edgar";
 
@@ -23,18 +22,18 @@
     echo "My name is" . $myname . "and i am" . $myage
     */
     $myage = 20;
-    echo "i am " . $myage . " years old";
+    echo "<p>i am " . $myage . " years old</p>";
     if ($myage >= 21) {
-        echo "you can buy sausage rolls";
+        echo "<p>you can buy sausage rolls</p>";
     }
     else if ($myage >= 18) {
-        echo "you can buy mugs and sausage rolls";
+        echo "<p>you can buy mugs and sausage rolls</p>";
     }
     else if ($myage >= 16) {
-        echo "you can buy specs mugs and sausage rolls";
+        echo "<p>you can buy specs mugs and sausage rolls</p>";
     }
     else {
-        echo "you can buy nothing";
+        echo "<p>you can buy nothing</p>";
     }
 
     ?>
