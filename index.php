@@ -4,6 +4,7 @@
 </head>
 <body>
 <p>
+    Test
     <?php
    /* $name = "Edgar";
 
@@ -23,17 +24,17 @@
     */
     $myage = 20;
     echo "i am " . $myage . " years old";
-    if($myage >= 21)
-    {
+    if ($myage >= 21) {
         echo "you can buy sausage rolls";
     }
-    else if($myage >= 18)
-    {
+    else if ($myage >= 18) {
         echo "you can buy mugs and sausage rolls";
     }
-    else ($myage >= 16)
-    {
+    else if ($myage >= 16) {
         echo "you can buy specs mugs and sausage rolls";
+    }
+    else {
+        echo "you can buy nothing";
     }
 
     ?>
