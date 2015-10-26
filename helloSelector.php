@@ -8,7 +8,7 @@
 <body>
 Where would you like to say hello
 
-<a href="helloPrinter.php?planet=Earth">Earth</a>
+<a href="helloPrinter.php?planet=Earth"></a>
 
 
 </body>
