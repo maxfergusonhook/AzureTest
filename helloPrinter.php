@@ -1,7 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
 <?php
-/**
- * Created by PhpStorm.
- * User: 1308886
- * Date: 26/10/2015
- * Time: 15:06
- */
+    $planet = $_GET["planet"];
+    echo "Hello " . $planet;
+?>
+
+</body>
+</html>
