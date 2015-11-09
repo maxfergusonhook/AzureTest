@@ -14,7 +14,7 @@ $result = $db->query($sql_query);
 echo "<h2>List of Movies</h2>";
 
 while($row = $result->fetch_array()){
-   echo "<p>" . $row['title'] . "</p>";
+   echo "<p>" . $row['title'] . " was released in <strong>" . $row['yearReleased'] . "</strong></p>";
 }
 
 $result->close();
