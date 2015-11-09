@@ -2,7 +2,7 @@
 
 // connect to your server and select database
 
-$db = new mysqli(“br-cdbr-azure-south-a.cloudapp.net”,“bcc549c1bd791c”,“acf8b795”, “azuretest”);
+$db = new mysqli("br-cdbr-azure-south-a.cloudapp.net","bcc549c1bd791c","acf8b795", "azuretest");
 
 // test if connection was established, and print any errors
 
@@ -19,7 +19,7 @@ $result = $db->query($sql_query);
 
 while($row = $result->fetch_array()){
    // print out fields from row of data
-   echo "<p>” . $row['superheroName'] . “</p>";
+   echo "<p>" . $row['title'] . "</p>";
 }
 
 $result->close();
