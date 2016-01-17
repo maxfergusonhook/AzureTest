@@ -1,34 +1,26 @@
 <?php
-$spec_stock = 7;
-$mug_stock = 7;
-$sausageroll_stock = 7;
-//Set the first date of the month
-$monthDate = 1;
-while(($spec_stock > 0) && ($mug_stock > 0) && ($sausageroll_stock > 0)) {
-   $todaysGood = rand(0,2);
-   //specs = 0
-   //mugs = 1
-   //sausagerolls = 2
+   $lotteryArray = array("Mike", "John", "Mark", "Angela", "Roger", "Chrisina", "Suzanne", "Sue" , "Ines", "Ian");
 
-   switch ($todaysGood) {
-      case 0:
-         $spec_stock--;
-         echo "On day " . $monthDate . " Specs are available";
-         break;
-      case 1:
-         $mug_stock--;
-         echo "On day " . $monthDate . " Mugs are available";
-         break;
-      case 2:
-         $sausageroll_stock--;
-         echo "On day " . $monthDate . " Sausage Rolls are available";
-         break;
-   }
-   $monthDate++; //puts the month forward by one day
-}
-echo "No more goods are available this month";
+   //Sort the array
+   sort($lotteryArray);
 
-//This code should work. I haven't tested it but it looks right. Mike.
+   //Select the winner
+   $winner = rand(0,count($lotteryArray));
+
+   //Prints the winner
+   echo "<p>The winner of all the specs is " . strtoupper($lotteryArray[$winner]) . "</p>";
+
+   //Remove the person from the array
+   unset($array[$winner]);
+
+   //Do the same again for mugs
+   $winner = rand(0,count($lotteryArray));
+   echo "<p>The winner of all the mugs is " . strtoupper($lotteryArray[$winner]) . "</p>";
+   unset($array[$winner]);
+
+   //and the sausuage rolls
+   $winner = rand(0,count($lotteryArray));
+   echo "<p>The winner of all the sausage rolls is " . strtoupper($lotteryArray[$winner]) . "</p>";
 
 ?>
 
