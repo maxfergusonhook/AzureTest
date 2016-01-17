@@ -1,28 +1,22 @@
 <?php
-for ($i = 1; $i < 30; $i++)
-{
-   $y = 0; //I'm using this as a marker to tell that at least one thing is being made
-   echo "<p>On day " . $i . " the following products are available: ";
+   function awardForCapture($specsOwned, $mugsOwned, $sausageRollsOwned)
+   {
+      $award = 10 * (($specsOwned * $mugsOwned * $sausageRollsOwned)/2);
+      return $award;
+   }
 
-   if ($i % 2 != 0)
+   function printWantedBanner($name, $specsOwned, $mugsOwned, $sausageRollsOwned)
    {
-      echo "Sausage Rolls ";
-      $y = 1;
-   }
-   if ($i % 3 != 0)
-   {
-      echo "Mugs ";
-      $y = 1;
-   }
-   if ($i % 4 != 0)
-   {
-      echo "Specs";
-      $y = 1;
-   }
-   if ($y == 1) //if one thing isn't being made on this day then it displays that nothing is available that day.
-   {
-      echo "NONE";
-   }
-   echo "</p>";
+      echo "<p><strong>Wanted:</strong> ". $name . "</p>";
+      echo "<p>Known to be in posession of:</p>";
+      echo "<p>Specs: " . $specsOwned . "</p>";
+      echo "<p>Mugs:" . $mugsOwned . "</p>";
+      echo "<p>Sausage Rolls: " . $sausageRollsOwned . "</p>";
+      echo "<p>Award for capture: " . awardForCapture($specsOwned,$mugsOwned,$sausageRollsOwned) . "</p>";
 
+   }
+
+   printWantedBanner("Mike",1,2,3);
+   printWantedBanner("John",3,4,5);
 ?>
+
