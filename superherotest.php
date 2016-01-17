@@ -1,22 +1,34 @@
 <?php
-   function awardForCapture($specsOwned, $mugsOwned, $sausageRollsOwned)
-   {
-      $award = 10 * (($specsOwned * $mugsOwned * $sausageRollsOwned)/2);
-      return $award;
+$spec_stock = 7;
+$mug_stock = 7;
+$sausageroll_stock = 7;
+//Set the first date of the month
+$monthDate = 1;
+while(($spec_stock > 0) && ($mug_stock > 0) && ($sausageroll_stock > 0)) {
+   $todaysGood = rand(0,2);
+   //specs = 0
+   //mugs = 1
+   //sausagerolls = 2
+
+   switch ($todaysGood) {
+      case 0:
+         $spec_stock--;
+         echo "On day " . $monthDate . " Specs are available";
+         break;
+      case 1:
+         $mug_stock--;
+         echo "On day " . $monthDate . " Mugs are available";
+         break;
+      case 2:
+         $sausageroll_stock--;
+         echo "On day " . $monthDate . " Sausage Rolls are available";
+         break;
    }
+   $monthDate++; //puts the month forward by one day
+}
+echo "No more goods are available this month";
 
-   function printWantedBanner($name, $specsOwned, $mugsOwned, $sausageRollsOwned)
-   {
-      echo "<p><strong>Wanted:</strong> ". $name . "</p>";
-      echo "<p>Known to be in posession of:</p>";
-      echo "<p>Specs: " . $specsOwned . "</p>";
-      echo "<p>Mugs:" . $mugsOwned . "</p>";
-      echo "<p>Sausage Rolls: " . $sausageRollsOwned . "</p>";
-      echo "<p>Award for capture: " . awardForCapture($specsOwned,$mugsOwned,$sausageRollsOwned) . "</p>";
+//This code should work. I haven't tested it but it looks right. Mike.
 
-   }
-
-   printWantedBanner("Mike",1,2,3);
-   printWantedBanner("John",3,4,5);
 ?>
 
